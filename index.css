@@ -13,19 +13,22 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+
+/* header section starts */
 header {
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 20px;
   background-image: url(images/bg-header-desktop.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .logo {
-  width: 80px;
+  max-width: 80px;
+  width: 100%;
   margin: 0 auto 25px;
 }
 header h1 {
@@ -48,30 +51,30 @@ header p {
   padding: 0.75rem 2rem;
   border-radius: 9999px;
   color: white;
-  font-weight: 600;
-  transition: 0.5s all ease;
+  font-weight: bold;
+  transition: all 0.5 ease;
   border: none;
-  cursor: pointer;
 }
 .btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-.btn.green {
+.green {
   background-color: rgb(38, 186, 164);
-  /* border-color: #26baa4; */
+  border-color: rgb(38, 186, 164);
 }
-.btn.blue {
+.blue {
   background-color: rgb(97, 115, 255);
-  /* border-color: rgb(97, 115, 255); */
+  border-color: rgb(97, 115, 255);
 }
 /* header sections ends */
+
 /* service section starts */
 .service {
   padding: 5px;
 }
 .service-title {
-  font-size: 25px;
+  font-size: 26px;
 }
 .service-description {
   font-size: 16px;
@@ -79,10 +82,9 @@ header p {
   max-width: 520px;
   margin: 0 auto 60px;
 }
-/* service section ends */
 .service-content {
   display: flex;
-  flex-wrap: wrap;
+
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -112,30 +114,36 @@ header p {
 .feature-description {
   font-size: 16px;
   color: #9fabb2;
-  text-transform: capitalize;
 }
 @media (max-width: 768px) {
   .service {
-    padding: 15px;
+    padding: 30px 20px 10px 20px;
   }
   .service-content {
     flex-direction: column;
+    gap: 40px;
   }
-  .service-features {
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
+  .service-title {
+    font-size: 24px;
+  }
+  .service-description {
     font-size: 14px;
   }
   .service-image {
     width: 80%;
     margin-left: 0;
   }
-  .feature-description {
+  .service-features {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .feature-title {
     font-size: 14px;
   }
-  .feature-title {
+  .feature-description {
     font-size: 14px;
   }
 }
@@ -153,13 +161,16 @@ header p {
     font-size: 12px;
   }
 }
+/* service section ends */
+
+/* Access Section Start  */
 
 .access {
-  padding: 100px 20px;
+  padding: 70px 20px;
 }
 
 .access-title {
-  font-size: 25px;
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
@@ -179,59 +190,98 @@ header p {
   width: 100%;
 }
 @media (max-width: 768px) {
+  .access {
+    padding: 30px 20px;
+  }
   .access-title {
     font-size: 24px;
   }
   .access-description {
-    font-size: 24px;
+    font-size: 14px;
   }
 }
 @media (max-width: 375px) {
   .access-title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .access-description {
     font-size: 12px;
   }
 }
-.supercharge {
-  text-align: center;
-  padding: 60px 40px 100px 40px;
+/* access section ends */
+
+/* flows section starts */
+.flows {
+  padding: 0px 40px 100px 40px;
 }
-.supercharge-title {
-  font-size: 32px;
+
+.flow-title {
+  font-size: 26px;
   margin-bottom: 20px;
 }
-.supercharge-description {
+
+.flows-description {
   font-size: 16px;
   color: #9fabb2;
   max-width: 520px;
   margin: 0 auto 50px;
 }
-.supercharge-features {
+
+.flows-row {
   display: flex;
   justify-content: center;
   max-width: 850px;
-  gap: 32px;
-  margin: 0 auto 50px;
-  flex-wrap: wrap;
+  margin: auto;
 }
-.features {
-  max-width: 300px;
+
+.items {
+  width: 300px;
   padding: 20px;
-  text-align: center;
 }
-.features-title {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.features img {
+
+.items img {
   width: 35px;
   margin-bottom: 20px;
 }
-.features p {
-  font-size: 15px;
+
+.items h6 {
+  font-size: 18px;
+  margin-bottom: 15px;
 }
+
+.items p {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .flows-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* flows section ends */
+
+/* brand section starts */
+.brand {
+  padding: 60px 0px;
+  background-color: #fff;
+}
+.brand-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.brand-row img {
+  max-width: 150px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+/* brand section ends */
+
+/* footer section starts */
 footer {
   background-color: rgba(159, 171, 178, 0.1);
   display: grid;
@@ -245,9 +295,11 @@ footer {
 }
 .footer-links {
   display: grid;
-  gap: 20px 40px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px 40px;
   justify-content: center;
-  grid-template-columns: repeat(3 auto);
+  align-items: center;
 }
 .footer-links a {
   text-decoration: none;
@@ -266,63 +318,17 @@ footer {
 @media (max-width: 768px) {
   footer {
     grid-template-columns: 1fr;
-    justify-content: center;
+    justify-items: center;
     text-align: center;
     padding: 30px;
   }
   .footer-links {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
     gap: 15px;
   }
   .footer-icons {
     justify-content: center;
   }
 }
-.supercharge {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.supercharge-title {
-  font-size: 32px;
-  margin-bottom: 16px;
-  color: #333;
-}
-
-.supercharge-description {
-  color: #777;
-  margin-bottom: 48px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-}
-
-.supercharge-features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-}
-
-.features {
-  max-width: 300px;
-  text-align: center;
-  padding: 16px;
-}
-
-.features img {
-  margin-bottom: 16px;
-}
-
-.features-title,
-.feature-title {
-  margin-bottom: 8px;
-  font-size: 20px;
-  color: #333;
-}
-
-.features-text {
-  color: #777;
-  font-size: 15px;
-}
+/* footer section ends */
